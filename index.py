@@ -8,7 +8,7 @@ MONGO_URI="mongodb://"+MONGO_HOST+":"+MONGO_PORT+"/"
 
 MONGO_DATABASE="JuegoProgramacion"
 
-try:
+try: 
 
     cliente=pymongo.MongoClient(MONGO_URI,serverSelectionTimeoutMS=MONGO_TIME_OUT)
     cliente.server_info()
@@ -18,4 +18,4 @@ try:
 except pymongo.errors.ServerSelectionTimeoutError as errorTime:
     print("Tiempo exedido" + errorTime)
 except pymongo.errors.ConnectionFailure as errorConection:
-    print("Fallo al conectarse a mongodb"+errorConection)
+    print("Fallo al conectarse a mongodb"+errorConection) 
