@@ -1,0 +1,8 @@
+POST http://127.0.0.1:8000/usuarios/crear/
+Content-Type: application/json
+
+{
+    "nombre": "Juan Pérez",
+    "nickName": "juan14"
+    
+}

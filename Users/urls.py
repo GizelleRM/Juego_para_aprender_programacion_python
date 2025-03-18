@@ -1,11 +1,11 @@
-from . import views
 from django.urls import path
-
+from .views import crear_usuario, listar_usuarios, obtener_usuario, actualizar_usuario, eliminar_usuario
 
 urlpatterns = [
-    path('', views.index),
-    path('hello/<str:username>',views.hello),
-    path('about/', views.about),
-    path('projects', views.projects),
-    path('tasks/<int:id>',views.tasks)
+    path('usuarios/', listar_usuarios, name = 'listar_usuarios'),
+    path('usuarios/crear/', crear_usuario, name  = 'crear_usuario'),
+    path('usuarios/<str:usuario_id>/', obtener_usuario),
+    path('usuarios/<str:usuario_id>/actualizar/', actualizar_usuario),
+    path('usuarios/<str:usuario_id>/eliminar/', eliminar_usuario),
 ]
+
