@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             console.error("El botón no fue encontrado en el DOM.");
         }
-    }, 2000); // 10 segundos
+    }, 3500); // 10 segundos
 
     // Agregar evento de clic al botón PLAY
     document.getElementById('botonPlay').addEventListener('click', function() {
