@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Index Page")
+    return HttpResponse("Index Page Giz")
     
     
 def hello(request, username):
@@ -22,3 +22,6 @@ def projects(request):
 def tasks(request, id):
     task =get_object_or_404(Task, id=id)
     return HttpResponse('task: ' % task.title)
+
+def home(request):
+    return render(request, 'Users/home.html')  # Importante incluir la subcarpeta 'Users/'

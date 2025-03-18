@@ -19,9 +19,10 @@ from Users import views
 from django.contrib import admin
 from django.urls import path, include
 
+#Estos son los urls de todas las aplicaciones creadas, este es el url principal del proyecto
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('usuarios/', include('Users.urls'))
+    path('', include('Users.urls')) #URL's de usuarios
 ]
 
 
